@@ -1,0 +1,27 @@
+
+#tdMasc {
+	width: 20px; height:20px;
+	background-image:url(../images/M.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#tdFem {
+	width: 20px; height:20px;
+	background-image:url(../images/F.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.icon {
+	width: 20px; height:20px;
+}
+.icon_large {
+	width: 50px; height:50px;
+}
+
+input[type="text"]:valid.focus {box-shadow: 0 0 1px 1px #e77600;}
+input[type="text"]:valid.nofocus {box-shadow:none;}
+
+input.invalid {box-shadow: 0 0 1px 1px red;}
+

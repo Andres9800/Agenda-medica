@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Administrador</title>
+        <link rel="shortcut icon" href="#">
+        <!--	CSS-->
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link href="../css/style.css" rel="stylesheet">
+
+        <!--	JS--> 
+        <!--	Externos--> 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" interity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
+        <!--	Propios--> 
+        <script src="https://kit.fontawesome.com/031bd476f2.js" crossorigin="anonymous"></script> 
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+        <script>
+            $(document).ready(function () {
+                $(".hamburger").click(function () {
+                    $(".wrapper").toggleClass("collapse");
+                });
+            });
+        </script>
+        <script src="/Proyecto2Progra4/js/sesion.js"></script> 
+        <script src="/Proyecto2Progra4/js/utils.js"></script> 
+        <script src="/Proyecto2Progra4/js/pdf.js"></script> 
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="top_navbar"  style="z-index: 3000;">
+                <div class="hamburger">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <div class="top_menu">
+                    <div class="logo">Proyecto 2 Progra 4</div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="homeAgenda.html"> <span class="icon"><i class="fa-solid fa-calendar-days"></i></span> <span class="title">Agenda</span> </a></li>
+                    <li><a href="pacientes.html"> <span class="icon"><i class="fa-solid fa-person"></i></span> <span class="title">Personas</span> </a></li>
+                    <li><a href="doctor.html" > <span class="icon"><i class="fa-solid fa-user-doctor"></i></span> <span class="title">Doctor</span> </a></li>
+                    <li><a id="botonRegresar" href="#"> <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span> <span class="title">LogOut</span> </a></li>
+                </ul>
+            </div>
+            <div class="main_container" style="color: black">
+
+                <hr class="PruebaDivide" style="color: black;
+                    margin: 0 auto;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 30%;
+                    margin-bottom: 10px;
+
+
+                    ">
+
+                <h2 class="text-uppercase text-center text-secondary " style="padding-top: 30px;text-align: center">Por favor adjunte aca los examenes </h2>
+
+                <form>
+                    <div class="form-group" style="margin-left: 10px; margin-right: 10px;">
+                        <hr class="PruebaDivide" style="color: black;
+                            margin: 0 auto;
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 30%;
+                            margin-bottom: 30px;
+
+
+                            ">
+                        <label for="pdf" style="  margin: 0 auto;
+                               display: block;
+                               margin-left: auto;
+                               margin-right: auto;
+                               width: 30%;  margin-bottom: 40px;text-align: center">Recuerde que este debe ser un archivo 		<br>	<br><span style="color: red;cursor: pointer;font-weight: 700;"> PDF</span></label>
+                        <input type="file"  class="form-control" name="pdf" id="pdf" placeholder="PDF" accept="application/pdf,application/vnd.ms-excel" style="color: white;
+                               margin: 0 auto;
+
+                               margin-left: auto;
+                               margin-right: auto;
+                               width: 30%;
+                               border-radius: 15px;
+                               cursor: pointer;
+
+                               ">
+                    </div>
+                </form>
+                <div class="modal-footer d-flex justify-content-center">
+                    <div>
+                        <input type="button" id="subirPDF" class="btn btn-primary btn-lg btn-block" value="Subir" style="color: white;
+                               margin: 0 auto;
+                               display: block;
+                               margin-left: auto;
+                               margin-right: auto;
+                               width: 30%;
+                               border-radius: 15px;">
+                    </div>
+                </div>
+
+                <p style="  margin: 0 auto;
+                   display: block;
+                   margin-left: auto;
+                   margin-right: auto;
+                   width: 30%;margin-top:40px  ;margin-bottom: 40px;text-align: center">El PDF Ingresado previamente es:		
+                </p>
+                <div style="margin-top: 20px;      width: 200px;
+                       height: 400px;">
+                    <div id="listado" style="
+                         margin: 0 auto;
+                         align-content: center;
+                         margin: 0 auto;
+                         text-align: center;
+                         margin-left: auto;
+                         margin-right: auto;
+                         border-radius: 15px;
+                  width: 30%;
+                  transform: translateX(480px);
+                         "></div>
+
+
+
+
+
+                </div>  
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </body>
+</html>

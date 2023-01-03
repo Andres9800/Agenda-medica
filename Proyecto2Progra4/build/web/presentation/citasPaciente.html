@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Administrador</title>
+        <link rel="shortcut icon" href="#">
+        <!--	CSS-->
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/assets/bootstrap/css/EstiloCitas.css">
+
+        <!--	JS--> 
+        <!--	Externos--> 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" interity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
+        <!--	Propios--> 
+        <script src="https://kit.fontawesome.com/031bd476f2.js" crossorigin="anonymous"></script> 
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+        <script>
+            $(document).ready(function () {
+                $(".hamburger").click(function () {
+                    $(".wrapper").toggleClass("collapse");
+                });
+            });
+        </script>
+        <script src="/Proyecto2Progra4/js/sesion.js"></script> 
+        <script src="/Proyecto2Progra4/js/utils.js"></script> 
+        <script src="/Proyecto2Progra4/js/citasPaci.js"></script> 
+
+    </head>
+   <div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo">Proyecto 2 Progra 4</div>
+    </div>
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#"> <span class="icon"><i class="fas fa-book"></i></span> <span class="title">Books</span></a></li>
+      <li><a href="homeAgenda.html"> <span class="icon"><i class="fa-solid fa-calendar-days"></i></span> <span class="title">Agenda</span> </a></li>
+      <li><a href="pacientes.html"> <span class="icon"><i class="fa-solid fa-person"></i></span> <span class="title">Personas</span> </a></li>
+      <li><a href="doctor.html" > <span class="icon"><i class="fa-solid fa-user-doctor"></i></span> <span class="title">Doctor</span> </a></li>
+      <li><a id="botonRegresar" href="#"> <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span> <span class="title">LogOut</span> </a></li>
+    </ul>
+  </div>
+  <div class="main_container" style="color: black">
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2 class="text-uppercase text-center text-secondary"><br>
+          <span style="color: rgb(0, 0, 0);">Citas &nbsp;</span><br>
+        </h2>
+        <hr class="PruebaDivide" style="color: black">
+        <div class="table-responsive" style="border-radius: 25px;">
+          <table class="table">
+            <thead class="text-center">
+              <tr style="font-size: 20px;background: #73bbc5;box-shadow: 0px 0px;">
+                <th class="text-center" style="background: #73bbc5;transform: translateY(-13px);"><br>
+                  <i class="far fa-id-card" style="margin-right: 6px;"></i><strong>Cedula</strong><br></th>
+                <th style="transform: translateY(-13px);"><br>
+                  <i class="fa-solid fa-calendar-days" style="margin-right: 6px;"></i><strong>Day</strong><br></th>
+                <th scope="col" style="transform: translateY(-13px);"> <strong>Estado</strong><br>
+                </th>
+                <th scope="col" style="transform: translateY(-13px);"> <i class="fa-solid fa-circle-question"></i><strong>Motivo</strong><br>
+                </th>
+                <th scope="col" style="transform: translateY(-13px);"> <i class="fa-solid fa-heart-pulse"></i><strong>Signos</strong><br>
+                </th>
+                <th scope="col" style="transform: translateY(-13px);"> <i class="fa-solid fa-comment-medical"></i><strong>Diagnostico</strong><br>
+                </th>
+                <th scope="col" style="transform: translateY(-13px);"> <i class="fa-solid fa-pills"></i><strong>Prescripciones</strong><br>
+                </th>
+                <th scope="col" style="transform: translateY(-13px);"> <i class="fa-solid fa-pen-to-square"></i><strong>Terminar Cita</strong><br>
+                </th>
+                <th scope="col" style="transform: translateY(-13px);"><i class="fa-solid fa-file-pdf"></i> <strong>PDF</strong><br>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="listado" style="text-align: center">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+

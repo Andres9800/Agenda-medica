@@ -1,0 +1,292 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+/* CSS Document */
+body {
+  background-color: gray;
+}
+.container {
+  display: flex;
+}
+i {
+  margin-top: 32px;
+  text-align: center;
+}
+.right-panel {
+  width: 100%;
+  text-align: center;
+  align-content: center;
+}
+.slider {
+  /*border: groove;
+	border-color:rgba(72,158,202,1.00);*/
+  width: 700px;
+  height: 80px;
+  align-self: center;
+  margin-left: 100px;
+  margin-right: 20px;
+  display: inline-flex;
+}
+.arrow {
+  color: gray;
+  text-align: center;
+  width: 20%;
+  border-radius: 60px;
+}
+.month {
+  color: gray;
+  background-color: aliceblue;
+  width: 80%;
+  font: bolder;
+  border-radius: 5px;
+}
+.arrow i:hover {
+  color: white;
+}
+.calendar {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 15px; 
+   width: 92%;
+  height: 700px;
+  margin-top: 5px;
+  /*margin-top: 40px;*/
+  display: flex;
+  overflow-y: scroll;
+  overflow-x: visible;
+}
+/* Track */
+.calendar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+/* Handle */
+.calendar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+/* Handle on hover */
+.calendar::-webkit-scrollbar-thumb:hover {
+  background-color: #28827D;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #28827D;
+}
+.day-column {
+  height: 100%;
+  width: 23%;
+  background-color: #34495e;
+}
+.day {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  background-color: #34495e;
+  font: bolder;
+ text-transform: uppercase;
+	
+
+}
+.date {
+	
+  height: 10%;
+  width: 100%;
+  background-color: white;
+  border-bottom: ridge #FFFFFF;
+  border-right: ridge #FFFFFF;
+}
+.in-date {
+	
+  height: 10%;
+  width: 100%;
+  border: #000000;
+  border-bottom: ridge #FFFFFF;
+  border-right: ridge #FFFFFF;
+  background-color: #64BCBD;
+  transition: 0.4s;
+  animation-duration: 2s;
+}
+.in-date:hover {
+  background-color: #2C6D6E;
+}
+.date-selected {
+  height: 10%;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  background-color: #2C6D6E;
+
+}
+.time-column {
+  background-color: #34495e;
+	
+}
+.time {
+	  background-color: #34495e;
+
+  width: 150px;
+  background-color: rgba(52, 73, 94, 0.9);
+  color: white;
+  text-align: center;
+  height: 10%;
+  background-color: #34495e;
+  text-align: center;
+}
+.calendar h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+	margin: 0;
+		transform: translateY(20px);
+	text-align: center;
+	font-weight: 700;
+
+}
+
+.popup {
+  display: grid;
+  visibility: hidden;
+  position: absolute;
+  border-radius: 10px;
+  left: 35%;
+  width: 400px;
+  height: 300px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  justify-content: center;
+  padding-top: 1em;
+  background-color: white;
+  z-index: 2;
+
+}
+.popup.active {
+  top: 10%;
+  visibility: visible;
+}
+.overlay {
+  display: flex;
+  visibility: hidden;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+    z-index: 1;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.overlay.active {
+  opacity: 0.5;
+  visibility: visible;
+}
+.p-container {}
+.row {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+.boton {
+  background-color: rgba(60, 144, 183, 1.00);
+  border-radius: 7px;
+  margin-top: 10px;
+  width: 90px;
+  height: 40px;
+  color: white;
+  font: bold;
+  font-weight: 500;
+  border: none;
+  margin-left: 104px;
+}
+.content-input input, .content-select select {
+  margin-left: 40px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+}
+.content-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+	
+	
+}
+.content-select select::-ms-expand {
+	
+  display: none;
+}
+.content-select {
+  width: 250px;
+  
+        
+}
+select option{
+	color: #000000;
+	background-color: #FFFFFF;
+	font-weight: 700;
+	
+}
+select option:hover{
+	color: black;
+	background-color: #FFFFFF;
+}
+.content-select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 7px 10px;
+  height: 42px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  background: #FFFFFF;
+  color: #FFFFFF;
+  font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+  color: black;
+text-align: center;
+	  transition: 0.4s;
+
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+.content-select select:hover {
+  background: #e77600;
+	color: white;
+	font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+.content-select i {
+  position: absolute;
+  
+  right: 20px;
+  top: calc(50% - 13px);
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-left: 4px solid #2AC176;
+  border-bottom: 4px solid #2AC176;
+  transform: rotate(-45deg); /* Giramos el cuadrado */
+  transition: all 0.25s ease;
+}
+.content-select:hover i {
+  margin-top: 3px;
+}
+.input-date2 {
+  float: right;
+  width: 50%;
+  margin-left: 20px;
+  background-color: rgba(28, 81, 105, 1.00);
+  color: white;
+  border-radius: 5px;
+
+}
